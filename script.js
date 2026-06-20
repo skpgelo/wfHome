@@ -2,7 +2,7 @@
 // spreadsheet: https://docs.google.com/spreadsheets/d/1URH184f_9MYbuY_PJkF2dFdbfEUFUVpTFPj-4D_n6v4/edit?gid=0#gid=0
 // Fungsi untuk menyediakan data pegawai ke HTML saat halaman dimuat
 // GANTI DENGAN URL WEB APP DEPLOYMENT ANDA
-const WEB_APP_URL = "URL_WEB_APP_ANDA_DISINI";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxgJdlYeDX001cPK3malvuUq__Cuc9oKstKBDn4eBcioUZPIZuV1LirN9jhZqgPBVgC/exec";
 
 // DATA PEGAWAI (Salinan terstruktur dari Sheet2 'Pegawai')
 // Anda dapat melakukan hardcode objek ini di file js agar tidak terbentur CORS GitHub-to-GoogleAppsScript
