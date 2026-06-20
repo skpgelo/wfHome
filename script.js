@@ -1,4 +1,6 @@
-ocument.addEventListener('DOMContentLoaded', function () {
+// webapps: https://script.google.com/macros/s/AKfycbxgJdlYeDX001cPK3malvuUq__Cuc9oKstKBDn4eBcioUZPIZuV1LirN9jhZqgPBVgC/exec
+// spreadsheet: https://docs.google.com/spreadsheets/d/1URH184f_9MYbuY_PJkF2dFdbfEUFUVpTFPj-4D_n6v4/edit?gid=0#gid=0
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('myForm');
     const submitBtn = document.getElementById('submitBtn');
 
