@@ -3,36 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form ke Spreadsheet</title>
-    <!-- Memanggil file CSS eksternal -->
+    <title>Form Input WFH</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="form-container">
-        <h2>Formulir Input Data</h2>
-        <!-- Ganti URL di bawah ini dengan URL Web App Anda -->
-        <form id="myForm" action="URL_WEB_APP_ANDA_DISINI" method="POST">
+        <h2>Formulir Validasi WFH</h2>
+        <form id="wfhForm">
+            
             <div class="form-group">
-                <label for="nama">Nama:</label>
-                <input type="text" id="nama" name="Nama" required placeholder="Masukkan nama lengkap">
+                <label for="selectNama">Nama Pegawai:</label>
+                <select id="selectNama" required>
+                    <option value="">-- Pilih Nama --</option>
+                </select>
+            </div>
+
+            <!-- Auto-filled by Dropdown Chain -->
+            <div class="form-group">
+                <label for="inputID">NIP:</label>
+                <input type="text" id="inputID" readonly placeholder="Otomatis terisi">
             </div>
 
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="Email" required placeholder="Masukkan alamat email">
+                <label for="inputJabatan">Jabatan:</label>
+                <input type="text" id="inputJabatan" readonly placeholder="Otomatis terisi">
             </div>
 
             <div class="form-group">
-                <label for="pesan">Pesan:</label>
-                <textarea id="pesan" name="Pesan" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                <label for="inputJabatan">Kelompok Kerja:</label>
+                <input type="text" id="inputPokja" readonly placeholder="Otomatis terisi">
             </div>
 
-            <button type="submit" id="submitBtn">Simpan Data</button>
+            <div class="form-group">
+                <label for="inputJabatan">Uraian Kegiatan:</label>
+                <textarea type="text" id="inputJobDesk" row="4"></textarea>
+            </div>
+
+            <!-- Geolocation (Auto-filled) -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="lat">Latitude:</label>
+                    <input type="text" id="lat" readonly required placeholder="Mencari...">
+                </div>
+                <div class="form-group">
+                    <label for="lon">Longitude:</label>
+                    <input type="text" id="lon" readonly required placeholder="Mencari...">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" readonly placeholder="Mendeteksi alamat koordinat..."></textarea>
+            </div>
+
+            <!-- Multi Image Inputs (Max 2 files, Max 2MB) -->
+            <div class="form-group">
+                <label>Gambar 1 (Max 2 File, @2MB):</label>
+                <input type="file" id="img1" accept="image/*" multiple>
+                <span class="file-info" id="info-img1">0 file terpilih</span>
+            </div>
+
+            <div class="form-group">
+                <label>Gambar 2 (Max 2 File, @2MB):</label>
+                <input type="file" id="img2" accept="image/*" multiple>
+                <span class="file-info" id="info-img2">0 file terpilih</span>
+            </div>
+
+            <div class="form-group">
+                <label>Gambar 3 (Max 2 File, @2MB):</label>
+                <input type="file" id="img3" accept="image/*" multiple>
+                <span class="file-info" id="info-img3">0 file terpilih</span>
+            </div>
+
+            <button type="submit" id="submitBtn">Kirim Data WFH</button>
         </form>
     </div>
 
-    <!-- Memanggil file JavaScript eksternal -->
     <script src="script.js"></script>
 </body>
 </html>
