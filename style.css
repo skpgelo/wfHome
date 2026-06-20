@@ -85,3 +85,15 @@ button:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
 }
+
+.card-flex {
+  display: flex; /* Mengaktifkan mode flexbox */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.kolom-kiri, .kolom-kanan {
+  flex: 1; /* Membagi ruang sama rata (50% : 50%) */
+  padding: 16px;
+}
