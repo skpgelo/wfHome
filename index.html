@@ -8,13 +8,16 @@
 </head>
 <body>
 
-    <div class="form-container">
+<div class="form-container">
         <h2>Formulir Validasi WFH</h2>
+    <div class="card-flex">
+      <div class="kolom-kiri">
+        <!-- Isi konten kiri (misal: Gambar) -->
         <form id="wfhForm">
             
             <div class="form-group">
                 <label for="selectNama">Nama Pegawai:</label>
-                <select id="selectNama" required>
+                <select id="selectNama" class="form-select" required>
                     <option value="">-- Pilih Nama --</option>
                 </select>
             </div>
@@ -37,9 +40,12 @@
 
             <div class="form-group">
                 <label for="inputJabatan">Uraian Kegiatan:</label>
-                <textarea type="text" id="inputJobDesk" row="4"></textarea>
+                <textarea type="text" id="inputJobDesk" row="4" required></textarea>
             </div>
 
+          </div>
+          <div class="kolom-kanan">
+    <!-- Isi konten kanan (misal: Teks) -->
             <!-- Geolocation (Auto-filled) -->
             <div class="form-row">
                 <div class="form-group">
@@ -75,6 +81,8 @@
                 <input type="file" id="img3" accept="image/*" multiple>
                 <span class="file-info" id="info-img3">0 file terpilih</span>
             </div>
+          </div>
+        </div>
 
             <button type="submit" id="submitBtn">Kirim Data WFH</button>
         </form>
